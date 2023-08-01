@@ -1,8 +1,12 @@
+/* Общие стили для всех устройств */
 body {
-
-  background: rgb(54, 54, 54);
-  background: linear-gradient(325deg, rgb(48, 48, 48) 0%, rgba(46,46,46,46) 15%, rgb(71, 71, 71) 57%);
-  
+  background: linear-gradient(
+    325deg,
+    rgb(48, 48, 48) 0%,
+    rgba(46, 46, 46, 46) 15%,
+    rgb(71, 71, 71) 57%
+  );
+  color: white;
 }
 
 .card-img-top {
@@ -16,44 +20,31 @@ body {
 
 .navbar {
   margin: 25px;
-}
-
-/* .container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-} */
-
-/* Styling the navbar */
-.navbar {
-  background-color:#535353;
+  background-color: #535353;
   padding: 10px;
 }
 
-
-/* Styling the search input */
 #search {
   background-color: #f0f0f0;
 }
 
-/* Styling the "Add" button in the navbar */
 #addButton {
-  color: #434343;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #434343;
   border-color: #434343;
 }
 
-/* Styling the container */
 #container {
   margin-top: 20px;
+  background-color: beige;
+  padding: 20px;
+  color: black;
 }
 
-/* Styling the product cards */
 .card {
   margin-bottom: 20px;
-  background-color: rgb(86, 86, 86) !important;
+  background-color: #565656;
 }
-
 
 .card-body {
   padding: 10px;
@@ -69,7 +60,6 @@ body {
   font-weight: bold;
 }
 
-/* Styling the "More" and "Delete" buttons */
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
@@ -78,14 +68,12 @@ body {
 .btn-danger {
   background-color: #dc3545;
   border-color: #dc3545;
-
 }
 
 .delete-button {
   margin-right: 10px;
 }
 
-/* Styling the "Add New Product" modal */
 .modal-title {
   font-size: 24px;
   font-weight: bold;
@@ -103,30 +91,18 @@ body {
   justify-content: space-between;
 }
 
-/* Styling the "Create" button in the modal */
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
   color: #fff;
 }
 
-/* Styling the "Cancel" button in the modal */
 .btn-secondary {
   background-color: #6c757d;
   border-color: #6c757d;
   color: #fff;
 }
 
-
-.card {
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  transition: transform 0.2s ease-in-out;
-}
-
-/* Add hover effect on product cards */
 .card:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -135,15 +111,12 @@ body {
 .footer {
   bottom: 0;
   width: 100%;
-  background-color:#5d6265;
-
+  background-color: #5d6265;
 }
 
 .footer .container {
   padding: 5px;
-  background-color:#5d6265;
-  
-  
+  background-color: #5d6265;
 }
 
 .footer .text-muted {
@@ -155,10 +128,55 @@ body {
   color: #fff !important;
   background-color: #17a2b8;
   border-color: #17a2b8;
-  
-
 }
 
 .input-a {
   margin-top: 10px;
+}
+
+/* Медиа-запросы для адаптивности на разные типы устройств */
+
+/* Мобильные устройства */
+@media (max-width: 576px) {
+  .navbar {
+    margin: 10px;
+  }
+
+  .container {
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+/* Планшеты и небольшие ноутбуки */
+@media (min-width: 577px) and (max-width: 992px) {
+  .navbar {
+    margin: 20px;
+  }
+
+  .container {
+    margin-top: 20px;
+    padding: 20px;
+  }
+}
+
+/* Настольные компьютеры */
+@media (min-width: 993px) {
+  .navbar {
+    margin: 25px;
+  }
+
+  .container {
+    margin-top: 30px;
+    padding: 30px;
+  }
 }
